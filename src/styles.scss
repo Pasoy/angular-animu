@@ -1,5 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
 
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
+
+/*
+ * FONTS
+ */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+
+/*
+ * CUSTOM THINGS
+ */
+body {
+  background-color: rgb(8, 8, 20);
+
+  font-family: Comfortaa, Arial, sans-serif;
+}
+
+.app-container {
+  padding-top: 15px;
+
+  color: rgb(211, 211, 211);
+}
+
+.scrollbar-track {
+  background: transparent !important;
+}
+
+.scrollbar-thumb {
+  background: rgba(190, 190, 190, 0.4) !important;
+}

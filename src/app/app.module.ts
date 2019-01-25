@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Scroll } from '@angular/router';
+import { HttpModule } from '@angular/http';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NavbarComponent } from './components/partials/navbar/navbar.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, HomeComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpModule,
+    RouterModule.forRoot([{ path: '', component: HomeComponent }])
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
