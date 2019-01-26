@@ -1,7 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
-
-$fa-font-path: '~font-awesome/fonts';
-@import '~font-awesome/scss/font-awesome';
+@import 'assets/scss/animu';
 
 /*
  * FONTS
@@ -11,16 +8,12 @@ $fa-font-path: '~font-awesome/fonts';
 /*
  * CUSTOM THINGS
  */
-body {
-  background-color: rgb(8, 8, 20);
-
-  font-family: Comfortaa, Arial, sans-serif;
+.scrollbar-track {
+  background: transparent !important;
 }
 
-.app-container {
-  padding-top: 15px;
-
-  color: rgb(211, 211, 211);
+.scrollbar-thumb {
+  background: rgba(190, 190, 190, 0.4) !important;
 }
 
 .scrollbar-track {
@@ -29,4 +22,91 @@ body {
 
 .scrollbar-thumb {
   background: rgba(190, 190, 190, 0.4) !important;
+}
+
+.letters {
+  position: relative;
+  display: flex;
+  width: 682px;
+  height: 162px;
+}
+
+.letter {
+  position: relative;
+  width: 162px;
+  height: 162px;
+  &:not(:first-child) {
+    margin-left: -42px;
+  }
+}
+
+.letter-i {
+  z-index: 1;
+  width: 82px;
+  transform-origin: 100% 50%;
+}
+
+.dot {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  transform: scale(0);
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  opacity: 0;
+}
+
+.icon-text {
+  path,
+  polygon {
+    opacity: 0;
+  }
+}
+
+.st0-e {
+  fill: none;
+  stroke: #3c5aa8;
+  stroke-width: 40;
+}
+
+.st1-e {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 2;
+}
+
+.letter {
+  .a-cl {
+    stroke: #13326d;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  .n-cl {
+    stroke: #2c69f5;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  .i-cl {
+    stroke: #273679;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  .m-1-cl {
+    stroke: #1f60c7;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  .m-2-cl {
+    stroke: #184d9b;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  .e-cl {
+    stroke: #1a2c68;
+    fill: none;
+    fill-rule: evenodd;
+  }
 }
