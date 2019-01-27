@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Scroll } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,7 +19,10 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     NgbModule,
     HttpModule,
-    RouterModule.forRoot([{ path: '', component: HomeComponent }])
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'profile', component: HomeComponent }
+    ])
   ],
   bootstrap: [AppComponent]
 })
